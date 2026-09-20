@@ -1,0 +1,108 @@
+﻿:root{
+    --color-primario: #121d9c11;
+    --color-secundario:#3347bd;
+    --color-texto:#000000;
+    --color-terciario:#d88148;
+    --color-cuarto:#a7022011;
+    --color-quinto:#ffffff;
+    --fuente-principal:"inter"
+
+
+}/*estilos globales*/
+body{font-family:var(--color-primario);
+         font-size: 16px ;
+         color:var(--color-texto);
+         /* line-height: 1.6*/
+         max-width: 1100px;/*limitamos el ancho*/
+         margin:0 auto;/*centramos horizontalmente*/
+         padding:0 1rem;
+}
+h1{
+    font-size: 2rem;
+    color:var(--color-texto);
+
+}
+h2{font-size: 1.5rem;
+   color:var(--color-texto)
+
+}
+h3{font-size: 1.23rem;
+   color:var(--color-texto)
+}
+p{
+    margin-bottom: 1rem;
+}
+/*HEADER*/
+header{background-color:var(--color-secundario);
+       color:var(--color-quinto);
+       padding: 1rem 1.5rem;
+       border-radius: 8px;
+}
+header is:(h1,h2,h3){
+    color:var(--color-quinto);
+}
+/*navegacion*/
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:1.5rem;
+    
+}
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-quinto)
+}
+nav a hover{
+    color:var(--color-cuarto);
+    text-decoration:underline;
+}
+/*Main y secciones*/
+main{
+    padding: 2rem 0;
+}
+section{
+    margin-bottom:2rem;
+        padding-bottom:1.5rem;
+        border-bottom:1px solid var(--color-secundario);
+}
+/*fooster*/
+footer{
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    padding: 1.5rem;
+    margin-top:2rem;
+    text-align:center;
+    
+}
+footer a{
+    color:var(--color-secundario);
+
+}
+/*figure(seccion pero de imagenes*/
+figure{display:grid;
+       grid-template-rows:repeat(auto-fit,minmax(200px,1fr));
+       gap:15px;
+       justify-items:center;
+}
+figure img{
+    width:250px;
+    height:180px;
+    text-align:center;
+    object-fit:cover;/*recorto pero mantengo las propociones*/
+    border-radius:8px;/*redondeo las esquinas*/
+}
+figcaption{
+    grid-row:1/-1;
+    text-align:center;
+    font-style:italic;
+    margin-bottom:1.5px;
+}
+footer a{
+
+}
+a:hover{
+    color:var(--color-terciario);
+
+}
