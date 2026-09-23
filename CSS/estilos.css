@@ -5,24 +5,29 @@
     --color-terciario:#d88148;
     --color-cuarto:#a7022011;
     --color-quinto:#ffffff;
-    --fuente-principal:"inter"
+    --color-sexto:#02b4e5;
+    --fuente-principal:"Italiana", serif;
+    --fuente-cuerpo:"Oswald", sans serif;
 
 
 }/*estilos globales*/
-body{font-family:var(--color-primario);
-         font-size: 16px ;
-         color:var(--color-texto);
-         /* line-height: 1.6*/
-         max-width: 1100px;/*limitamos el ancho*/
-         margin:0 auto;/*centramos horizontalmente*/
-         padding:0 1rem;
+body {
+    font-family: var(--color-primario);
+    font-size: 16px;
+    color: var(--color-texto);
+    /* line-height: 1.6*/
+    max-width: 1100px; /*limitamos el ancho*/
+    margin: 0 auto; /*centramos horizontalmente*/
+    padding: 0 1rem;
+    background-color: var(--color-cuarto);
 }
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color:var(--color-texto);
+    font-family:var(--fuente-cuerpo)
 
 }
-h2{font-size: 1.5rem;
+h2{font-size: 2rem;
    color:var(--color-texto)
 
 }
@@ -31,6 +36,9 @@ h3{font-size: 1.23rem;
 }
 p{
     margin-bottom: 1rem;
+    color:var(--color-quinto);
+    font-family:var(--fuente-cuerpo);
+    font-size:1.5rem;
 }
 /*HEADER*/
 header{background-color:var(--color-secundario);
@@ -52,28 +60,39 @@ nav a {
     color: var(--color-texto);
     text-decoration: none;
     font-weight: 600;
-    color: var(--color-quinto)
+    color: var(--color-quinto);
+    font-family:var(--fuente-principal);
 }
 nav a hover{
     color:var(--color-cuarto);
     text-decoration:underline;
 }
 /*Main y secciones*/
-main{
+main {background-color:var(--color-terciario);
     padding: 2rem 0;
+    border-radius:8px;
+}
+form{color:var(--color-quinto);
+    font-size:1.3rem;
+    font-family:var(--fuente-principal);
+    font-weight:700;
 }
 section{
     margin-bottom:2rem;
         padding-bottom:1.5rem;
         border-bottom:1px solid var(--color-secundario);
+        justify-items:center;
+
 }
 /*fooster*/
-footer{
-    background-color: var(--color-primario);
+footer{font-family:var(--fuente-cuerpo);
+    background-color: var(--color-sexto);
     color: var(--color-texto);
     padding: 1.5rem;
     margin-top:2rem;
     text-align:center;
+    opacity:1;
+    filter:blur(0.5px)contrast(1)sepia(0.1)
     
 }
 footer a{
