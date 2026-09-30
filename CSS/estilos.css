@@ -30,11 +30,15 @@ body {
 h1{
     font-size: 2.5rem;
     color:var(--color-texto);
-    font-family:var(--fuente-cuerpo)
+    font-family:var(--fuente-cuerpo);
+    padding: 0rem 1.5rem;
 
 }
-h2{font-size: 2rem;
-   color:var(--color-texto)
+h2{
+    font-size: 2rem;
+    color:var(--color-texto);
+    padding: 0rem 1.5rem;
+    
 
 }
 h3{font-size: 1.23rem;
@@ -45,6 +49,7 @@ p{
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
     font-size:1.5rem;
+    padding: 0rem 1.5rem;
 }
 /*HEADER*/
 header{background-color:var(--color-secundario);
