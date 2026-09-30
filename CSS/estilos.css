@@ -52,8 +52,9 @@ header{background-color:var(--color-secundario);
        padding: 1rem 1.5rem;
        border-radius: 8px;
 }
-header is:(h1, h2, h3) {
+header h1, h2, h3 {
     color:var(--color-quinto);
+    font-family:var(--fuente-cuerpo);
 }
 /*navegacion*/
 nav ul{
@@ -101,7 +102,7 @@ form{color:var(--color-quinto);
 section{
     margin-bottom:2rem;
         padding-bottom:1.5rem;
-        border-bottom:1px solid var(--color-secundario);
+        border-bottom:5px solid var(--color-septimo);
         justify-items:center;
         border-radius:8px;
 
@@ -150,4 +151,8 @@ a:hover{
 .imagen {
     text-align:center;
     border-radius: 0px;
+}
+.lugares {
+    width:600px;
+    height:500px;
 }
