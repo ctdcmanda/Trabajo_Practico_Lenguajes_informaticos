@@ -52,6 +52,10 @@ header{background-color:var(--color-secundario);
        padding: 1rem 1.5rem;
        border-radius: 8px;
 }
+.logo{
+    width:300px;
+    height:300px;
+}
 header h1, h2, h3 {
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
@@ -150,7 +154,7 @@ a:hover{
 
 .imagen {
     text-align:center;
-    border-radius: 0px;
+    border-radius: 6px;
 }
 .lugares {
     width:600px;
