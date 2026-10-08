@@ -30,15 +30,11 @@ body {
 h1{
     font-size: 2.5rem;
     color:var(--color-texto);
-    font-family:var(--fuente-cuerpo);
-    padding: 0rem 1.5rem;
+    font-family:var(--fuente-cuerpo)
 
 }
-h2{
-    font-size: 2rem;
-    color:var(--color-texto);
-    padding: 0rem 1.5rem;
-    
+h2{font-size: 2rem;
+   color:var(--color-texto)
 
 }
 h3{font-size: 1.23rem;
@@ -49,13 +45,13 @@ p{
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
     font-size:1.5rem;
-    padding: 0rem 1.5rem;
 }
 /*HEADER*/
 header{background-color:var(--color-secundario);
        color:var(--color-quinto);
        padding: 1rem 1.5rem;
        border-radius: 8px;
+       margin-block-end:2.3rem;
 }
 .logo{
     width:300px;
@@ -84,10 +80,16 @@ nav a hover{
     text-decoration:underline;
 }
 /*Main y secciones*/
-main {background-color:var(--color-terciario);
+main {
+    padding: 1rem 1.5rem;
+    margin-bottom: auto;
+    background-color: var(--color-terciario);
     padding: 12rem 0;
-    border-radius:8px;
+    border-radius: 8px;
+    margin-block-end: 2.8rem;
+   
 }
+
 .personajes {
     margin-bottom:3rem;
     display: flex;
@@ -114,6 +116,7 @@ section{
         border-bottom:5px solid var(--color-septimo);
         justify-items:center;
         border-radius:8px;
+        
 
 }
 /*fooster*/
