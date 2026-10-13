@@ -17,7 +17,7 @@ body {
     font-size: 16px;
     color: var(--color-texto);
     /* line-height: 1.6*/
-    max-width: 1100px; /*limitamos el ancho*/
+    max-width: 1170px; /*limitamos el ancho*/
     margin: 0 auto; /*centramos horizontalmente*/
     padding:  1rem 0 ;
     background-color: var(--color-cuarto);
@@ -81,12 +81,13 @@ nav a hover{
 }
 /*Main y secciones*/
 main {
-    padding: 1rem 1.5rem;
+    padding: 3rem 1.8rem;
     margin-bottom: auto;
     background-color: var(--color-terciario);
     padding: 12rem 0;
     border-radius: 8px;
     margin-block-end: 2.8rem;
+    
    
 }
 
@@ -109,6 +110,11 @@ form{color:var(--color-quinto);
     font-size:1.3rem;
     font-family:var(--fuente-principal);
     font-weight:700;
+    align-items:center;
+    text-align:left;
+    display:grid;
+    grid-auto-columns:auto;
+
 }
 section{
     margin-bottom:2rem;
@@ -140,6 +146,9 @@ figure{display:grid;
        grid-template-rows:repeat(auto-fit,minmax(200px,1fr));
        gap:15px;
        justify-items:center;
+}
+.galeria{
+    display:flex;
 }
 figure img{
     width:250px;
