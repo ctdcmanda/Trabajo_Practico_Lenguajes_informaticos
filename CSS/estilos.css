@@ -21,7 +21,7 @@ body {
     margin: 0 auto; /*centramos horizontalmente*/
     padding:  1rem 0 ;
     background-color: var(--color-cuarto);
-    background-image:url(../images/wallpaper.jpg);
+    background-image:url(../images/wallpaper3.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
@@ -83,8 +83,8 @@ nav a hover{
 main {
     padding: 3rem 1.8rem;
     margin-bottom: auto;
-    background-color: var(--color-terciario);
-    padding: 12rem 0;
+   background-color: var(--color-cuarto);
+    padding: 1rem 1.8rem;
     border-radius: 8px;
     margin-block-end: 2.8rem;
     
