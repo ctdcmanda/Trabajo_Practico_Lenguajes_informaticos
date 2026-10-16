@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+   
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     <link rel="stylesheet" href="CSS/estilos.css" />
 </head>
 <body>
@@ -70,10 +73,33 @@
                 <h2>Terrenos de caza</h2>
                 <p>Eres cazador y tu unica forma de relajarte es estar acecho entre los pastizales en la calidez del sol,Tenemos para ti los terrenos de caza para que pongas a pruebas tus habilidades y destrezas en los terrenos de caza</p>
                 <figure class="galeria">
-                    <img src="images/begimo.jpg" alt="zona de caza" width="400" height="400" />
-                    <img src="images/campamento.jpg" alt="zona de caza" width="400" height="400" />
-                    <img src="images/terreno-de-caza.jpg" alt="zona de caza" width="400" height="400" />
-                </figure>
+                    <div id="galeria" class="carousel slide" data-bs-ride="carousel">
+  <div class="galeria">
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#galeria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/terreno-de-caza.jpg" class="d-block w-100" alt="terreno de caza">
+    </div>
+    <div class="carousel-item">
+      <img src="images/campamento.jpg" class="d-block w-100" alt="Campamento de cazadores">
+    </div>
+    <div class="carousel-item">
+      <img src="images/begimo.jpg" class="d-block w-100" alt="maquina salvaje begimo">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#galeria" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#galeria" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+                
             </article>
         </section>
     </main>
@@ -85,5 +111,6 @@
         </address>
         <small> ® 2026 Todos los derechos reservados.</small>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
