@@ -177,3 +177,34 @@ a:hover{
     width:600px;
     height:500px;
 }
+
+.planes {
+    width:1200px;
+    height:600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.producto {
+    margin-bottom:3rem; /* salteado */
+    gap: 2rem; /* saltaeado lineas*/
+
+    padding: 1rem;
+    align-items:center;
+    text-align: left;
+    border-radius: 10px;
+
+    width:350px;
+    background-color: var(--color-terciario);
+}
+
+.precio {
+    background-color: var(--color-septimo);
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.plan {
+    font-size: 25px;
+}
