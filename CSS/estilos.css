@@ -27,9 +27,15 @@ body {
     background-position:center;
     line-height: 1.5;
 }
+.pagina-planes{
+    background-image:url(../images/atronador.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+}
 h1{
     font-size: 2.5rem;
-    color:var(--color-texto);
+    color:var(--color-quinto);
     font-family:var(--fuente-cuerpo)
 
 }
@@ -52,10 +58,17 @@ header{background-color:var(--color-secundario);
        padding: 1rem 1.5rem;
        border-radius: 8px;
        margin-block-end:2.3rem;
+       
+       
+       
 }
 .logo{
-    width:300px;
-    height:300px;
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    
+   
+    
 }
 header h1, h2, h3 {
     color:var(--color-quinto);
@@ -66,6 +79,7 @@ nav ul{
     list-style:none;
     display:flex;
     gap:1.5rem;
+    font-size:1.2rem;
     
 }
 nav a {
@@ -77,7 +91,16 @@ nav a {
 }
 nav a hover{
     color:var(--color-cuarto);
-    text-decoration:underline;
+    text-decoration:none;
+}
+a.volver{
+    font-family:var(--fuente-cuerpo);
+    font-size: 1.23rem;
+    background-color: #3347bd;
+    padding: 1.4rem 3.75rem;
+    color:var(--color-quinto);
+    text-decoration:none;
+    border-radius: 45%;
 }
 /*Main y secciones*/
 main {
@@ -92,19 +115,27 @@ main {
 }
 
 .personajes {
-    margin-bottom:3rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-items:center;
-    padding: 1rem;
-    align-items:center;
     text-align: center;
+    margin-bottom:3rem;
+    display: grid;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem 1rem;
+    justify-items:center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem 1.8rem;
     border-radius: 10px;
-    width:300px;
-   flex-direction:row;
-   
-
+    font-size: 1.2rem;
+}
+figure.personajes img{
+    display:grid;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: none;
+    margin:0 auto;
+    
 }
 form{color:var(--color-quinto);
     font-size:1.3rem;
@@ -127,7 +158,7 @@ section{
 }
 /*fooster*/
 footer{font-family:var(--fuente-cuerpo);
-    background-color: var(--color-sexto);
+    background-color: var(--color-cuarto);
     color: var(--color-texto);
     padding: 1.5rem;
     margin-top:2rem;
@@ -137,7 +168,7 @@ footer{font-family:var(--fuente-cuerpo);
     
 }
 footer a{
-    color:var(--color-secundario);
+    color:var(--color-texto);
     text-decoration:none;
 
 }
@@ -147,18 +178,45 @@ figure{display:grid;
        gap:15px;
        justify-items:center;
 }
-.galeria{
-    display:flex;
+/* ==========================================
+   CORRECCIONES PARA EL CARRUSEL DE BOOTSTRAP
+   ========================================== */
+
+/* 1. Desactivamos el Grid global de 'figure' solo para la galería */
+figure.galeria {
+    display: block !important; 
+    width: 100%;
+    max-width: 700px; /* Limitamos el ancho para que no se desparrame en pantallas grandes */
+    margin: 0 auto;   /* Lo centramos horizontalmente */
+    border-radius: 8px; /* Mantenemos tus esquinas redondeadas */
 }
+
+/* 2. Forzamos a las imágenes del carrusel a medir lo mismo sin estiramientos raros */
+#galeria .carousel-item img {
+    width: 100% !important;   /* Ocupa el 100% del contenedor de la galería */
+    height: 500px !important;  /* Fijamos una altura uniforme para todas las fotos */
+    object-fit: cover;         /* Evita el estiramiento y recorta la imagen limpiamente */
+    border-radius: 8px;        /* Mantenemos tus esquinas redondeadas */
+}
+
+/* 3. Ajuste opcional: Centramos los puntitos indicadores de Bootstrap */
+.carousel-indicators {
+    margin-bottom: 1rem !important;
+}
+
+   
+
 figure img{
-    width:250px;
-    height:180px;
+    width:1050px;
+    height:880px;
     text-align:center;
     object-fit:cover;/*recorto pero mantengo las propociones*/
     border-radius:8px;/*redondeo las esquinas*/
+    border: 5px solid var(--color-texto);
 }
-figcaption{
-    grid-row:1/-1;
+figcaption{    
+    color:var(--color-quinto);
+  
     text-align:center;
     font-style:italic;
     margin-bottom:1.5px;
@@ -177,15 +235,22 @@ a:hover{
     width:600px;
     height:500px;
 }
-
 .planes {
-    width:1200px;
-    height:600px;
+    width:100%;
+    height:auto;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
 }
-
+.planes img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 5px solid var(--color-texto);
+    margin: 0 auto;
+}
 .producto {
     margin-bottom:3rem; /* salteado */
     gap: 2rem; /* saltaeado lineas*/
@@ -194,7 +259,7 @@ a:hover{
     align-items:center;
     text-align: left;
     border-radius: 10px;
-
+    border: 2px solid var(--color-septimo);
     width:350px;
     background-color: var(--color-terciario);
 }
