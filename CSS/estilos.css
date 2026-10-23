@@ -20,7 +20,6 @@ body {
     max-width: 1170px; /*limitamos el ancho*/
     margin: 0 auto; /*centramos horizontalmente*/
     padding:  1rem 0 ;
-    background-color: var(--color-cuarto);
     background-image:url(../images/wallpaper3.jpg);
     background-repeat: no-repeat;
     background-size:cover;
@@ -36,8 +35,11 @@ body {
 h1{
     font-size: 2.5rem;
     color:var(--color-quinto);
-    font-family:var(--fuente-cuerpo)
-
+    font-family:var(--fuente-cuerpo);
+    flex: 1;
+    white-space:nowrap;
+    margin:0%;
+    
 }
 h2{font-size: 2rem;
    color:var(--color-texto)
@@ -50,23 +52,34 @@ p{
     margin-bottom: 1rem;
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
-    font-size:1.5rem;
+    font-size:2.0rem;
+    font-weight: 600;
+    
 }
 /*HEADER*/
-header{background-color:var(--color-secundario);
+header{display: flex;
+       flex-direction: column;
+       background-color:var(--color-secundario);
        color:var(--color-quinto);
        padding: 1rem 1.5rem;
+       border-bottom:5px solid var(--color-septimo);
        border-radius: 8px;
        margin-block-end:2.3rem;
+       position:sticky;
+       top: 0%;
        
        
-       
+           
 }
-.logo{
+
+
+.logo{display: flex;
+    align-items: center;
     width:200px;
     height:200px;
     border-radius: 50%;
-    
+    gap: 2rem;
+     
    
     
 }
@@ -75,8 +88,9 @@ header h1, h2, h3 {
     font-family:var(--fuente-cuerpo);
 }
 /*navegacion*/
-nav ul{
-    list-style:none;
+nav ul {
+    padding-block-start: 1.50rem;
+    list-style:none;/*le agrega simbolos o enumera de forma ordernada*/
     display:flex;
     gap:1.5rem;
     font-size:1.2rem;
@@ -89,14 +103,15 @@ nav a {
     color: var(--color-quinto);
     font-family:var(--fuente-principal);
 }
+
 nav a hover{
     color:var(--color-cuarto);
     text-decoration:none;
 }
 a.volver{
     display: flex;
-    position: fixed;
-    top: 93%;
+    position: fixed;/* "fixed"fija el elemento en la pagina*/
+    top: 93%;left: 15.4%;/* posicion en altura dentro de la pagina*/
     font-family:var(--fuente-cuerpo);
     font-size: 1.23rem;
     background-color: #3347bd;
@@ -104,15 +119,15 @@ a.volver{
     color:var(--color-quinto);
     text-decoration:none;
     border-radius: 45%;
-    border: 3px solid var(--color-septimo);
-    z-index: 1000;
+    border: 3px solid var(--color-septimo);/* le da color al contorno*/
+    z-index: 1000;/*se sobrepone a todo*/
 
 }
 /*Main y secciones*/
 main {
     padding: 3rem 1.8rem;
     margin-bottom: auto;
-   background-color: var(--color-cuarto);
+    background-color:#8a404028;
     padding: 1rem 1.8rem;
     border-radius: 8px;
     margin-block-end: 2.8rem;
@@ -158,9 +173,7 @@ section{
         padding-bottom:1.5rem;
         border-bottom:5px solid var(--color-septimo);
         justify-items:center;
-        border-radius:8px;
-        
-
+        border-radius:8px;      
 }
 /*fooster*/
 footer{font-family:var(--fuente-cuerpo);
@@ -180,7 +193,7 @@ footer a{
 }
 /*figure(seccion pero de imagenes*/
 figure{display:grid;
-       grid-template-rows:repeat(auto-fit,minmax(200px,1fr));
+       grid-template-rows:repeat(auto-fit,minmax(200px,1fr));/* Crea tantas filas de mínimo 200px como entren en esos 600px */
        gap:15px;
        justify-items:center;
 }
@@ -222,8 +235,8 @@ figure img{
 }
 figcaption{    
     color:var(--color-quinto);
-  
     text-align:center;
+    font-weight: bolder;/*cambia ek grosor del texto*/
     font-style:italic;
     margin-bottom:1.5px;
 }
@@ -280,4 +293,10 @@ a:hover{
 
 .plan {
     font-size: 25px;
+}
+ button{
+    font-size: larger;
+    font-weight: 800;
+    color: var(--color-quinto);
+    background-color: var(--color-cuarto);
 }
