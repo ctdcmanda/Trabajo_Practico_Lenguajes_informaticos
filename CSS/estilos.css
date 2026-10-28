@@ -33,7 +33,7 @@ body {
     background-position:center;
 }
 h1{
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
     flex: 1;
@@ -79,8 +79,7 @@ header{display: flex;
     height:200px;
     border-radius: 50%;
     gap: 2rem;
-     
-   
+   max-width: 1000px;   
     
 }
 header h1, h2, h3 {
