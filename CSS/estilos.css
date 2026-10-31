@@ -33,12 +33,12 @@ body {
     background-position:center;
 }
 h1{
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
     flex: 1;
-    white-space:nowrap;
     margin:0%;
+    
     
 }
 h2{font-size: 2rem;
@@ -52,35 +52,25 @@ p{
     margin-bottom: 1rem;
     color:var(--color-quinto);
     font-family:var(--fuente-cuerpo);
-    font-size:2.0rem;
+    font-size:1.6rem;
     font-weight: 600;
     
 }
 /*HEADER*/
-header{display: flex;
-       flex-direction: column;
-       background-color:var(--color-secundario);
-       color:var(--color-quinto);
-       padding: 1rem 1.5rem;
-       border-bottom:5px solid var(--color-septimo);
-       border-radius: 8px;
-       margin-block-start: 7.5%;
-       margin-block-end:2.3rem;
-  
+
        
        
            
-}
 
 
-.logo{display: flex;
+
+.logo{
     align-items: center;
     width:200px;
     height:200px;
     border-radius: 50%;
     gap: 2rem;
-   max-width: 1000px;   
-    
+    flex-shrink: 0;
 }
 header h1, h2, h3 {
     color:var(--color-quinto);
@@ -107,6 +97,12 @@ nav a hover{
     color:var(--color-cuarto);
     text-decoration:none;
 }
+
+
+
+
+
+
 a.volver{
     display: flex;
     position: fixed;/* "fixed"fija el elemento en la pagina*/
@@ -124,7 +120,6 @@ a.volver{
 }
 /*Main y secciones*/
 main {
-    padding: 3rem 1.8rem;
     margin-bottom: auto;
     background-color:#8a404028;
     padding: 1rem 1.8rem;
@@ -168,11 +163,29 @@ form{color:var(--color-quinto);
 
 }
 section{
-    margin-bottom:2rem;
+         margin-bottom:2rem;/* separa la seccion inferior de la caja de otras*/
         padding-bottom:1.5rem;
         border-bottom:5px solid var(--color-septimo);
         justify-items:center;
         border-radius:8px;      
+}section.hero{
+       display: flex;
+       flex-direction: row;
+       align-items: center;
+       gap: 1rem;       
+       padding: 1.5rem;
+       background-color: var(--color-secundario);
+       border-bottom:5px solid var(--color-septimo);
+       border-radius: 8px;
+       margin-block-start: 7.5%;
+       margin-block-end:2.3rem;
+}
+iframe{
+    max-width: 100%;
+    max-height: auto;
+    width: 900px;
+    height: 415px;
+
 }
 /*fooster*/
 footer{font-family:var(--fuente-cuerpo);
@@ -225,6 +238,7 @@ figure.galeria {
    
 
 figure img{
+    max-width:100%;
     width:1050px;
     height:880px;
     text-align:center;
