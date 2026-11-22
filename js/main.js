@@ -1,19 +1,20 @@
+/* formulario "Contacto" */
 const formulario = document.getElementById("form")
 const nombreform = document.getElementById("nombre")
 const mensaje = document.getElementById("mensaje")
 const tribuformulario = document.getElementById("tribu")
 const ciclosvividos = document.getElementById("edad")
 const visita = document.getElementById("razonVisita")
-
-
-
+/* Importante para separar codigo y no se rompa con uno inexistente en otra pagina*/
+if(formulario){
+                            /* input: Al escribir*/
 ciclosvividos.addEventListener("input", () => {
     if (ciclosvividos.value.length > 3) {
         ciclosvividos.value = ciclosvividos.value.slice(0, 3);
     }
-});
+});                         /* Al enviar*/
 formulario.addEventListener("submit", (event)=>{
-    event.preventDefault()
+    event.preventDefault() /* Evita que recargue la pagina al hacer submit*/
     const nombre=nombreform.value.trim()
     const tribu=tribuformulario.value.trim()
     const edad=ciclosvividos.value.trim()
@@ -29,10 +30,19 @@ formulario.addEventListener("submit", (event)=>{
         mensaje.classList.add("alert-danger")
 
     }
-    else if(edad < 1 || edad > 120) {
-        mensaje.textContent="Los carjas dicen:Nadie vive más que el sol,coloca un ciclo correcto."
-        mensaje.classList.add("alert-danger")
-            
+    else if(edad === "" || edad < 1 || edad > 120) {
+        
+        if (edad==="")  {
+            mensaje.textContent = "Escribí tus ciclos"
+
+
+        } else {
+
+        mensaje.textContent="Los carjas dicen:Nadie vive más que el sol,Coloca un ciclo correcto."
+        
+            }
+            mensaje.classList.add("alert-danger")
+
     }
     else if(razonVisita===""){
         mensaje.textContent="Selecciona una opción."
@@ -52,4 +62,51 @@ formulario.addEventListener("submit", (event)=>{
 
 
 
-});
+});}
+/* Buscador Navbar*/
+const Buscador = document.getElementById("formbuscador")
+const items = document.getElementById("item")
+/* Importante para separar codigo y no se rompa con uno inexistente en otra pagina*/
+if(Buscador){
+
+    items.addEventListener("focus", () => {
+        items.placeholder = "Buscar";/* reemplaza el valor de placeholder despues de la primera interaccion*/
+    })
+
+    Buscador.addEventListener ("submit" ,(event) => {
+
+    event.preventDefault()
+    const texto = items.value.trim().toLowerCase()
+
+    
+    console.log(texto)
+
+    if (texto === "inicio" || texto === "menu principal") {
+
+        window.location.href = "index.html";
+
+    } else if (texto === "lugares") {
+
+        window.location.href = "lugares.html";
+
+    } else if (texto === "ciudad") {
+
+        window.location.href = "ciudad.html";
+
+    } else if (texto === "planes") {
+
+        window.location.href = "planes.html";
+
+    } else if (texto === "contacto") {
+
+        window.location.href = "contacto.html";
+
+    } else {
+
+       items.value = ""
+       items.placeholder = "inténtalo de nuevo"
+
+    }
+
+
+});}
