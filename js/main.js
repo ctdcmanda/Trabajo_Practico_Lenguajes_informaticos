@@ -122,8 +122,8 @@ botonVerMas.addEventListener("click", (event) => {
     if (botonVerMas.textContent === `Ver Mas`) {
         event.preventDefault()
         mensajeBotonVerMas.textContent = textoEscrito;
-        botonVerMas.textContent = `Ver Menos`;
-    } else if (botonVerMas.textContent === `Ver Menos`) {
+        botonVerMas.textContent = `Ocultar`;
+    } else if (botonVerMas.textContent === `Ocultar`) {
         event.preventDefault()
         mensajeBotonVerMas.textContent = ``;
         botonVerMas.textContent = `Ver Mas`;
