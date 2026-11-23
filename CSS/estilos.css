@@ -323,3 +323,13 @@ a:hover{
     color: var(--color-quinto);
     background-color: var(--color-cuarto);
 }
+
+.verMas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+    
+}

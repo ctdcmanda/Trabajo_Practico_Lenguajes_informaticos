@@ -110,3 +110,24 @@ if(Buscador){
 
 
 });}
+
+/* Opcion de ver más*/
+const mirarMas = document.getElementById("verMas");
+const botonVerMas = document.getElementById("verMasBoton");
+const mensajeBotonVerMas = document.getElementById("textoBotonVerMas");
+
+mirarMas.addEventListener("click", (event) => {
+    if (botonVerMas.textContent === `Ver Mas`) {
+        event.preventDefault()
+        mensajeBotonVerMas.textContent = `Como vio Meridian es una gran ciudad con una
+        gran cantidad de actividades y lugares para
+        visitar y con una historia muy interesante`;
+        botonVerMas.textContent = `Ver Menos`;
+    } else if (botonVerMas.textContent === `Ver Menos`) {
+        event.preventDefault()
+        mensajeBotonVerMas.textContent = ``;
+        botonVerMas.textContent = `Ver Mas`;
+    }
+    
+    
+})
