@@ -115,13 +115,13 @@ if(Buscador){
 const mirarMas = document.getElementById("verMas");
 const botonVerMas = document.getElementById("verMasBoton");
 const mensajeBotonVerMas = document.getElementById("textoBotonVerMas");
+const textoEscrito = document.getElementById("textoBotonVerMas").textContent;
+mensajeBotonVerMas.textContent = ``
 
-mirarMas.addEventListener("click", (event) => {
+botonVerMas.addEventListener("click", (event) => {
     if (botonVerMas.textContent === `Ver Mas`) {
         event.preventDefault()
-        mensajeBotonVerMas.textContent = `Como vio Meridian es una gran ciudad con una
-        gran cantidad de actividades y lugares para
-        visitar y con una historia muy interesante`;
+        mensajeBotonVerMas.textContent = textoEscrito;
         botonVerMas.textContent = `Ver Menos`;
     } else if (botonVerMas.textContent === `Ver Menos`) {
         event.preventDefault()
