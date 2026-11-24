@@ -57,12 +57,9 @@ formulario.addEventListener("submit", (event)=>{
         formulario.reset()
 
     }
-
-
-
-
-
 });}
+
+
 /* Buscador Navbar*/
 const Buscador = document.getElementById("formbuscador")
 const items = document.getElementById("item")
@@ -118,16 +115,18 @@ const mensajeBotonVerMas = document.getElementById("textoBotonVerMas");
 const textoEscrito = document.getElementById("textoBotonVerMas").textContent;
 mensajeBotonVerMas.textContent = ``
 
+if(mirarMas) {
+
 botonVerMas.addEventListener("click", (event) => {
-    if (botonVerMas.textContent === `Ver Mas`) {
+    if (botonVerMas.textContent === `Ver Más`) {
         event.preventDefault()
         mensajeBotonVerMas.textContent = textoEscrito;
         botonVerMas.textContent = `Ocultar`;
     } else if (botonVerMas.textContent === `Ocultar`) {
         event.preventDefault()
         mensajeBotonVerMas.textContent = ``;
-        botonVerMas.textContent = `Ver Mas`;
+        botonVerMas.textContent = `Ver Más`;// SOLÖ en este caso(no necesariamente,aprendizaje):El texto dentro de las "" debe ser igual al del html para ser funcional//
     }
     
     
-})
+})}

@@ -259,7 +259,7 @@ figure img{
 figcaption{    
     color:var(--color-quinto);
     text-align:center;
-    font-weight: bolder;/*cambia ek grosor del texto*/
+    font-weight: bolder;/*cambia el grosor del texto*/
     font-style:italic;
     margin-bottom:1.5px;
 }
@@ -297,7 +297,7 @@ a:hover{
 }
 .producto {
     margin-bottom:3rem; /* salteado */
-    gap: 2rem; /* saltaeado lineas*/
+    gap: 2rem; /* salteado lineas*/
 
     padding: 1rem;
     align-items:center;
@@ -332,5 +332,15 @@ a:hover{
     gap: 1rem;
     flex-wrap: wrap;
     flex-direction: column;
+
     
+}
+#verMasBoton{
+background-color: var(--color-secundario);
+padding-inline: 3.5rem;
+font-family: var(--fuente-principal);
+font-size: 1.5rem;
+border-radius: 11%;
+border: 3px solid var(--color-septimo);/* le da color al contorno*/
+
 }
